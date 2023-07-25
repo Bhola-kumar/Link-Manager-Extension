@@ -1,5 +1,5 @@
 {
-    "name": "Link Saver",
+    "name": "Link Manager",
     "version": "1.0",
     "manifest_version": 2,
     "description": "Save important links",
@@ -12,7 +12,8 @@
     },
     "permissions": [
       "storage",
-      "tabs"
+      "tabs",
+      "notifications"
     ]
   }
   

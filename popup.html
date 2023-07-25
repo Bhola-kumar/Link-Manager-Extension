@@ -5,27 +5,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Link Saver</title>
+  <title>Link Manager</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <h1>Link Saver</h1>
-  <p>Save your important links</p>
-  <form id="link-form">
-    <label>Link Name:</label>
-    <input type="text" id="link-name" name="link-name" required>
-    <label>Link URL:</label>
-    <input type="text" id="link-url" name="link-url" required>
-    <input type="button" id="submit-form" value="Save Link"></input>
-  </form>
-
-  <button id="show-all-links">Show All Links</button>
-
-  <div id="myList">
+  <header class="heading">
+    <h1 class="heading-name">Link Manager</h1>
+    <p class="heading-slogan">Save your important links</p>
+  </header>
+  <div class="main">
+  <div class="input-container">
+    <div class="form-container">
+      <form id="link-form" class="form-link-input">
+        <label>Link Name:</label>
+        <input type="text" id="link-name" name="link-name" required>
+        <label>Link URL:</label>
+        <input type="text" id="link-url" name="link-url" required>
+        <div class="choose-dir">
+          <select id="folder-select" class="choose-dir-option">
+            <option disabled selected value="Default-Folder">Choose Directory</option>
+          </select>
+          <input type="button" id="submit-form" value="Save Link" class="save-link-btn"></input>
+        </div>
+      </form>
+    </div>
+    <div class="create-dir-div">
+      <button class="create-dir-btn"><i class="fa fa-folder"></i>
+        <div>Create Folder</div>
+      </button>
+      <div id="all-folder" class="mkdir">
+        <input type="text" id="new-folder-input" placeholder="New Folder" class="mkdir-input"></input>
+        <button id="create-dict" class="mkdir-btn">Go</button>
+      </div>
+    </div>
   </div>
-  <script src="popup.js"></script>
+  
 
+
+  <div class="output-container">
+    <div class="toggle">
+      <div class="toggle-buttons"><button class="back-btn"><i class="fa fa-arrow-left"></i></button></div>
+      <div class="toggle-buttons"><button id="show-all-links" class="show-links-btn">Show All Links</button></div>
+      <div class="toggle-buttons"></div>
+    </div>
+    <div id="myList" class="output-link-container"></div>
+    <div id="toast" class="toast"></div>
+  </div>
+</div>
+  <script src="popup.js"></script>
+  
 </body>
 
 </html>

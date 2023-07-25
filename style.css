@@ -1,0 +1,332 @@
+.main{
+  min-width: 400px;
+  /* display: flex; */
+}
+  
+  .toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+ 
+  .toast.show {
+    opacity: 1;
+  }
+ /* header */
+  /* Styling for the header */
+.heading {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .heading-name {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .heading-slogan {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+
+/* container (form-container) */
+
+  /* Styling for the input container and form section */
+.input-container {
+    margin-top: 20px;
+    /* display: flex; */
+    /* height: 200px; */
+    justify-content: center;
+    transition: height 2s;
+  }
+  
+  .form-container {
+    width: 400px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .form-link-input {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-link-input label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-link-input input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  .choose-dir {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .choose-dir-option {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  .save-link-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .save-link-btn:hover {
+    background-color: #45a049;
+  }
+  
+
+
+  /* make dir section */
+
+  
+  
+
+  /* Styling for the "New" button */
+.create-dir-div {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .create-dir-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .create-dir-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Styling for the "New Folder" section */
+  .mkdir {
+    display: none;
+    margin-top: 20px;
+  }
+
+  
+  
+  .mkdir-input {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  .mkdir-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .mkdir-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for the output container */
+.output-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .show-links-btn {
+    
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .show-links-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .output-link-container {
+    margin-top: 10px;
+    max-width: 400px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+
+
+  /* show link */
+
+  .search-input {
+    /* Your styles here */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    /* Add other styles as needed */
+  }
+
+
+/* Styling for the folder-div */
+.folder-itself {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    /* Add other styles as needed */
+  }
+  
+  /* .folder-itself .folder-itself {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* Add other styles as needed */
+  /* } */ 
+  
+  .folder-itself .folder-heading {
+    font-size: 18px;
+    margin: 10px 0;
+    /* Add other styles as needed */
+  }
+  
+  .folder-itself .folder-delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Add other styles as needed */
+  }
+  
+  .folder-itself .folder-delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+
+  
+  /* Styling for the item-in-folder */
+.item-in-folder {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Add other styles as needed */
+  }
+  
+  .item-in-folder .item-ka-link {
+    flex: 1;
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: auto;
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .item-in-folder .copy-link-btn,
+  .item-in-folder .link-delete-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    /* Add other styles as needed */
+  }
+  
+  .item-in-folder .copy-link-btn {
+    margin-right: 10px;
+  }
+  
+  .item-in-folder .copy-link-btn:hover,
+  .item-in-folder .link-delete-btn:hover {
+    background-color: #2980b9;
+  }
+  
+
+
+/* Styling for the toggle container */
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100px; */
+    /* border: 1px solid black; */
+    padding: 10px;
+  }
+  
+  /* Styling for the back button */
+  .back-btn {
+    
+    background-color: transparent;
+    border:none;
+    /* justify-content: flex-start; */
+    /* border: 2px 0 black;
+    
+    border-radius: 20px; */
+    display: none;
+    cursor: pointer;
+    margin-right: auto;
+    /* Add other styles as needed */
+  }
+  
+  .back-btn i {
+    color: #333;
+  }
+  
+  .back-btn:hover i {
+    color: #555;
+  }
+
+  .toggle-buttons{
+    flex-grow: 1;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  
