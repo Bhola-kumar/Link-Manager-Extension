@@ -4,6 +4,7 @@
 }
   
   .toast {
+    /* min-width: 400px; */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -25,10 +26,11 @@
  /* header */
   /* Styling for the header */
 .heading {
-    background-color: #222;
+    background-color: #006a5c;
     padding: 20px;
     text-align: center;
     color: #fff;
+    min-width: 400px;
   }
   
   .heading-name {
@@ -51,13 +53,15 @@
     /* height: 200px; */
     justify-content: center;
     transition: height 2s;
+    /* background-color: blue; */
   }
   
   .form-container {
     width: 400px;
-    background-color: #f5f5f5;
+    background-color: #eeebeb;
     padding: 20px;
     border-radius: 5px;
+    margin:auto;
   }
   
   .form-link-input {
@@ -92,7 +96,7 @@
   }
   
   .save-link-btn {
-    background-color: #4caf50;
+    background-color: #f35959;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -101,7 +105,7 @@
   }
   
   .save-link-btn:hover {
-    background-color: #45a049;
+    background-color: #f43838;
   }
   
 
@@ -112,12 +116,12 @@
   
 
   /* Styling for the "New" button */
-.create-dir-div {
+.create-folder-container {
     text-align: center;
     margin-top: 20px;
   }
   
-  .create-dir-btn {
+  .create-folder-btn {
     background-color: #3498db;
     color: #fff;
     border: none;
@@ -126,7 +130,7 @@
     cursor: pointer;
   }
   
-  .create-dir-btn:hover {
+  .create-folder-btn:hover {
     background-color: #2980b9;
   }
   
@@ -164,27 +168,18 @@
     text-align: center;
   }
   
-  .show-links-btn {
-    
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .show-links-btn:hover {
-    background-color: #2980b9;
-  }
+
   
   .output-link-container {
+    height: 250px;
+    overflow-y: auto;
     margin-top: 10px;
-    max-width: 400px;
-    background-color: #f5f5f5;
-    padding: 20px;
+    max-width: 420px;
+    background-color: #ddd6d6;
+    padding: 10px;
     border-radius: 5px;
     display: none;
+    /* border: black 1px solid; */
   }
   
 
@@ -262,8 +257,11 @@
     color: #333;
     text-decoration: none;
     margin-right: 10px;
+    font-size: 12px; /* Set the desired font size */
+    font-family: 'Century Gothic'; /* Set the desired font family */
+    font-weight: bold;
   }
-  
+
   .item-in-folder .copy-link-btn,
   .item-in-folder .link-delete-btn {
     background-color: #3498db;
@@ -284,49 +282,102 @@
     background-color: #2980b9;
   }
   
+/* kjasdfsbdifbsdfbs av ka kaam */
 
-
-/* Styling for the toggle container */
 .toggle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* height: 100px; */
-    /* border: 1px solid black; */
-    padding: 10px;
-  }
-  
-  /* Styling for the back button */
-  .back-btn {
-    
-    background-color: transparent;
-    border:none;
-    /* justify-content: flex-start; */
-    /* border: 2px 0 black;
-    
-    border-radius: 20px; */
-    display: none;
-    cursor: pointer;
-    margin-right: auto;
-    /* Add other styles as needed */
-  }
-  
-  .back-btn i {
-    color: #333;
-  }
-  
-  .back-btn:hover i {
-    color: #555;
-  }
+  /* min-width: 400px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #cdcaca;
+  border-radius: 3px;
+}
 
-  .toggle-buttons{
-    flex-grow: 1;
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Styling for the back button */
+.toggle-buttons{
+  flex-grow: 1;
+  /* border: 1px solid black; */
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.back-btn-div{
+  display: flex;
+  align-items: center;
+  /* min-width: 400px; */
 
-
-
+}
+.back-btn {
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+  margin-right:auto;
+  padding: 10px;
   
+  /* Add other styles as needed */
+}
+
+.back-btn i {
+  color: #333;
+}
+
+.back-btn:hover i {
+  color: #555;
+}
+
+
+.show-links-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right:auto;
+}
+
+.show-links-btn:hover {
+  background-color: #2980b9;
+}
+
+.export-btn {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.export-btn:hover {
+  background-color: #219a52;
+}
+.text-font{
+  font-size: 12px;
+  font-family: 'Century Gothic';
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* search bar css */
+
+.search-bar-div-class {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 9px;
+}
+
+.search-bar-class {
+  padding: 8px;
+  display: none;
+  width: 200px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: auto;
+}
+

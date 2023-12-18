@@ -15,47 +15,70 @@
     <h1 class="heading-name">Link Manager</h1>
     <p class="heading-slogan">Save your important links</p>
   </header>
+
+
   <div class="main">
-  <div class="input-container">
-    <div class="form-container">
-      <form id="link-form" class="form-link-input">
-        <label>Link Name:</label>
-        <input type="text" id="link-name" name="link-name" required>
-        <label>Link URL:</label>
-        <input type="text" id="link-url" name="link-url" required>
-        <div class="choose-dir">
-          <select id="folder-select" class="choose-dir-option">
-            <option disabled selected value="Default-Folder">Choose Directory</option>
-          </select>
-          <input type="button" id="submit-form" value="Save Link" class="save-link-btn"></input>
+    <!-- 1 -->
+    <div class="input-container">
+      <div class="form-container">
+        <form id="link-form" class="form-link-input">
+          <label>Link Name:</label>
+          <input type="text" id="link-title" name="link-title" class="text-font" placeholder = "Title of your Link" required>
+          <label>Link URL:</label>
+          <input type="text" id="link-url" name="link-url" class="text-font" placeholder = "Url of your Link" required>
+          <div class="choose-dir">
+            <select id="choose-directory" class="choose-dir-option text-font">
+              <option disabled selected value="Default-Folder" >Choose Directory</option>
+            </select>
+            <input type="button" id="submit-form" value="Save Link" class="save-link-btn"></input>
+          </div>
+        </form>
+      </div>
+
+      <div class="create-folder-container">
+        <button class="create-folder-btn"><i class="fa fa-folder"></i>
+          <div>Create Folder</div>
+        </button>
+        <div id="create-folder-section" class="mkdir">
+          <input type="text" id="new-folder-input" placeholder="New Folder" class="mkdir-input text-font"></input>
+          <button id="create-newFolder-in-dict-btn" class="mkdir-btn">Go</button>
         </div>
-      </form>
-    </div>
-    <div class="create-dir-div">
-      <button class="create-dir-btn"><i class="fa fa-folder"></i>
-        <div>Create Folder</div>
-      </button>
-      <div id="all-folder" class="mkdir">
-        <input type="text" id="new-folder-input" placeholder="New Folder" class="mkdir-input"></input>
-        <button id="create-dict" class="mkdir-btn">Go</button>
       </div>
     </div>
-  </div>
-  
 
 
-  <div class="output-container">
-    <div class="toggle">
-      <div class="toggle-buttons"><button class="back-btn"><i class="fa fa-arrow-left"></i></button></div>
-      <div class="toggle-buttons"><button id="show-all-links" class="show-links-btn">Show All Links</button></div>
-      <div class="toggle-buttons"></div>
+    <!-- 2 -->
+    <div class="output-container">
+      <!-- section 1: back-button showAllLinks-button temp-button  -->
+      <div class="back-btn-div"><button class="back-btn"><i class="fa fa-arrow-left"></i></button></div>
+      <div class="toggle">
+        <div class="toggle-buttons"><button id="show-all-links" class="show-links-btn">Show All Links</button></div>
+        <div class="toggle-buttons"><button id="export-to-pdf" class="export-btn">Export to PDF</button></div>
+      </div>
+      <div class="search-bar-div-class" id="search-bar-div-id">
+        <input type="search" id="search-bar-id" class="search-bar-class text-font" placeholder="Search..." data-search>
+      </div>
+      <!-- section 2: links output field -->
+      <div id="myList" class="output-link-container">
+        <!-- list appear dynamically -->
+      </div>
+
+      <!-- section 3: toast field -->
+      <div id="toast" class="toast"></div>
     </div>
-    <div id="myList" class="output-link-container"></div>
-    <div id="toast" class="toast"></div>
+
   </div>
-</div>
-  <script src="popup.js"></script>
-  
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
+  <script src="parallax-jsPDF-7315ccb\dist\jspdf.umd.min.js"></script>
+  <script type="module" src="popup.js"></script>
+  <script type="module" src="threads/currentFoldersList.js"></script>
+  <script type="module" src="threads\css-using-js.js"></script>
+  <script type="module" src="threads\fillFormWithCurrentLink.js"></script>
+  <script type="module" src="threads\addNewFoldertoDictionary.js"></script>
+  <script type="module" src="threads\showAllLinksintheirFolder.js"></script>
+  <script type="module" src="threads/exportToPdf.js"></script>
+  <script type="module" src="threads/search.js"></script>
 </body>
 
 </html>
