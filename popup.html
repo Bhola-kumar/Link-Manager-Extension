@@ -12,58 +12,68 @@
 
 <body>
   <header class="heading">
-    <h1 class="heading-name">Link Manager</h1>
+    <h1 class="heading-name"><i class="fa fa-link" aria-hidden="true"></i> Link Manager</h1>
     <p class="heading-slogan">Save your important links</p>
   </header>
 
 
   <div class="main">
-    <!-- 1 -->
+
+    <!-- section 1: back-button github repo  -->
+    <div class="share-back-div">
+      <div class="back-btn-div"><button class="back-btn"><i class="fa fa-arrow-left"></i></button></div>
+      <div class="githubRepo-div"><a href="https://github.com/Bhola-kumar/Link-Manager-Extension/tree/version-3.0"
+          target="_blank"><i class="fa fa-github"></i></a></div>
+    </div>
+
+    <!-- section 2: input container  -->
     <div class="input-container">
+      <!-- section 2.1 form container -->
       <div class="form-container">
         <form id="link-form" class="form-link-input">
           <label>Link Name:</label>
-          <input type="text" id="link-title" name="link-title" class="text-font" placeholder = "Title of your Link" required>
+          <input type="text" id="link-title" name="link-title" class="text-font" placeholder="Title of your Link"
+            required>
           <label>Link URL:</label>
-          <input type="text" id="link-url" name="link-url" class="text-font" placeholder = "Url of your Link" required>
+          <input type="text" id="link-url" name="link-url" class="text-font" placeholder="Url of your Link" required>
           <div class="choose-dir">
             <select id="choose-directory" class="choose-dir-option text-font">
-              <option disabled selected value="Default-Folder" >Choose Directory</option>
+              <option disabled selected value="Default-Folder">Choose Directory</option>
             </select>
+            <input type="button" value="" class="create-folder-btn"></input>
             <input type="button" id="submit-form" value="Save Link" class="save-link-btn"></input>
           </div>
         </form>
       </div>
-
-      <div class="create-folder-container">
-        <button class="create-folder-btn"><i class="fa fa-folder"></i>
-          <div>Create Folder</div>
-        </button>
-        <div id="create-folder-section" class="mkdir">
+      <!-- section 2.2 create-folder-section -->
+      <div class="create-folder-section" id="mkdir">
+        <div class="create-folder-container">
           <input type="text" id="new-folder-input" placeholder="New Folder" class="mkdir-input text-font"></input>
           <button id="create-newFolder-in-dict-btn" class="mkdir-btn">Go</button>
         </div>
       </div>
+
     </div>
 
 
-    <!-- 2 -->
+    <!-- section 3 - output container -->
     <div class="output-container">
-      <!-- section 1: back-button showAllLinks-button temp-button  -->
-      <div class="back-btn-div"><button class="back-btn"><i class="fa fa-arrow-left"></i></button></div>
+      <!-- section 3.1 - show all link and exportToPDF -->
       <div class="toggle">
-        <div class="toggle-buttons"><button id="show-all-links" class="show-links-btn">Show All Links</button></div>
-        <div class="toggle-buttons"><button id="export-to-pdf" class="export-btn">Export to PDF</button></div>
+        <div class="toggle-buttons"><button id="show-all-links" class="show-links-btn">Show All <i class="fa fa-link" aria-hidden="true"></i></button></div>
+        <div class="toggle-buttons"><button id="export-to-pdf" class="export-btn">Export to  <i class="fa fa-file-pdf-o" aria-hidden="true"></i></button></div>
       </div>
+      <!-- section 3.2 - search bar -->
       <div class="search-bar-div-class" id="search-bar-div-id">
-        <input type="search" id="search-bar-id" class="search-bar-class text-font" placeholder="Search..." data-search>
+        <div class="search-bar-class">
+          <input type="search" id="search-bar-id" class="search-bar text-font" placeholder="Search..." data-search>
+        </div>
       </div>
-      <!-- section 2: links output field -->
+      <!-- section 3.3: links output field -->
       <div id="myList" class="output-link-container">
         <!-- list appear dynamically -->
       </div>
-
-      <!-- section 3: toast field -->
+      <!-- section 3.4: toast field -->
       <div id="toast" class="toast"></div>
     </div>
 

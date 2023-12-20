@@ -2,11 +2,11 @@ let showAllLinksBtn = document.getElementById("show-all-links");
 let inputContainer = document.getElementsByClassName("input-container")[0];
 let outputLinkContainer = document.getElementsByClassName("output-link-container")[0];
 let backbtn = document.getElementsByClassName('back-btn')[0];
-let searchBar=document.getElementById('search-bar-id');
-let createFolderSection = document.getElementById('create-folder-section');
+let searchBar=document.getElementById('search-bar-div-id');
+let createFolderSection = document.getElementById('mkdir');
 function hideinputContainerSection() {
   showAllLinksBtn.disabled = true;
-  showAllLinksBtn.style.cursor = 'not-allowed';
+  // showAllLinksBtn.style.cursor = 'not-allowed';
   inputContainer.style.display = 'none';
   createFolderSection.style.display = 'none';
   backbtn.style.display = 'block';

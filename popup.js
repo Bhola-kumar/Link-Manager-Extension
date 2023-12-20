@@ -32,7 +32,7 @@ if (showAllLinksBtn) {
 }
 
 let exportToPdfBtn = document.getElementById("export-to-pdf");
-let createFolderSection = document.getElementById('create-folder-section');
+let createFolderSection = document.getElementById('mkdir');
 exportToPdfBtn.addEventListener("click", () => {
   chrome.runtime.sendMessage({ message: "exportToPdf" });
   createFolderSection.style.display = 'none';

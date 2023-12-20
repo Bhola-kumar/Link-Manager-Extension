@@ -80,7 +80,7 @@ function saveLinktoFolder() {
       chrome.storage.sync.set(result,function(){
         showToast(`Link added to your folder '${folderName}' successfully!`);
       });
-      document.getElementById('create-folder-section').style.display = 'none';
+      document.getElementById('mkdir').style.display = 'none';
       document.getElementById('link-title').value = "";
       document.getElementById('link-url').value="";
       return;
